@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int angka = 10;
+    if (angka > 5) {
+        printf("Angka lebih besar dari 5\n");
+    }
+    return 0;
+}

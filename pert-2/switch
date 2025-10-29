@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int pilihan = 2;
+    
+    switch (pilihan) {
+        case 1:
+            printf("Anda memilih opsi 1\n");
+            break;
+        case 2:
+            printf("Anda memilih opsi 2\n");
+            break;
+        case 3:
+            printf("Anda memilih opsi 3\n");
+            break;
+        default:
+            printf("Pilihan tidak valid\n");
+            break;
+    }
+    
+    // Contoh switch dengan karakter
+    char grade = 'B';
+    switch (grade) {
+        case 'A':
+            printf("Excellent!\n");
+            break;
+        case 'B':
+            printf("Good job!\n");
+            break;
+        case 'C':
+            printf("Passed\n");
+            break;
+        case 'D':
+            printf("Not passed\n");
+            break;
+        default:
+            printf("Invalid grade\n");
+    }
+    
+    return 0;
+}

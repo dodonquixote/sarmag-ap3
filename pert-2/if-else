@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int umur = 17;
+    if (umur >= 18) {
+        printf("Anda sudah dewasa\n");
+    } else {
+        printf("Anda masih di bawah umur\n");
+    }
+    return 0;
+}

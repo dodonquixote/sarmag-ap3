@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int angka = 15;
+    if (angka > 0) {
+        printf("Angka positif\n");
+        if (angka % 2 == 0) {
+            printf("dan merupakan bilangan genap\n");
+        } else {
+            printf("dan merupakan bilangan ganjil\n");
+        }
+    } else {
+        printf("Angka negatif atau nol\n");
+    }
+    return 0;
+}

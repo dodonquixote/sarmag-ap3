@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int jumlah, i;
+    float nilai, total, rata;
+    char ulang;
+
+    do {
+        total = 0;
+
+        printf("\nMasukkan jumlah siswa: ");
+        scanf("%d", &jumlah);
+
+        for (i = 1; i <= jumlah; i++) {
+            printf("Masukkan nilai siswa ke-%d: ", i);
+            scanf("%f", &nilai);
+            total += nilai;
+        }
+
+        rata = total / jumlah;
+        printf("\nTotal nilai: %.2f\n", total);
+        printf("Rata-rata nilai: %.2f\n", rata);
+
+        if (rata >= 90)
+            printf("Kategori: Sangat Baik ✅\n");
+        else if (rata >= 75)
+            printf("Kategori: Baik 👍\n");
+        else
+            printf("Kategori: Perlu Perbaikan ⚠️\n");
+
+        printf("\nApakah ingin menghitung lagi? (y/n): ");
+        scanf(" %c", &ulang); // spasi sebelum %c untuk mengabaikan enter
+
+    } while (ulang == 'y' || ulang == 'Y');
+
+    printf("\nProgram selesai. Terima kasih!\n");
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n, a = 0, b = 1, next, sum = 0, count = 1;
+
+    printf("Masukkan jumlah deret Fibonacci: ");
+    scanf("%d", &n);
+
+    printf("\nDeret Fibonacci: ");
+    while (count <= n) {
+        printf("%d ", a);
+        sum += a;
+        next = a + b;
+        a = b;
+        b = next;
+        count++;
+    }
+
+    printf("\nJumlah total deret Fibonacci = %d\n", sum);
+    return 0;
+}

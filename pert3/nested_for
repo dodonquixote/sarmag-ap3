@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, j;
+
+    printf("Masukkan tinggi segitiga: ");
+    scanf("%d", &n);
+
+    printf("\nPola segitiga rata kanan menurun:\n");
+    for (i = n; i >= 1; i--) {
+        // Cetak spasi dulu agar rata kanan
+        for (j = 1; j <= n - i; j++) {
+            printf("  "); // memberi jarak antar kolom
+        }
+        // Cetak angka menurun
+        for (j = 1; j <= i; j++) {
+            printf("%3d ", j);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}

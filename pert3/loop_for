@@ -1,1 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int n, total = 0;
+
+    printf("Masukkan batas bilangan ganjil: ");
+    scanf("%d", &n);
+
+    printf("\nBilangan ganjil dari 1 sampai %d:\n", n);
+    for (int i = 1; i <= n; i++) { 
+        if (i % 2 != 0) {   
+            printf("%d ", i);
+            total += i;     
+        }
+    }
+
+    return 0;
+}
 

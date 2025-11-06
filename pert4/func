@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+// Deklarasi fungsi
+void tampilMenu();
+int tambah(int a, int b);
+int kurang(int a, int b);
+void cetakHasil(int hasil);
+
+int main() {
+    int x, y, pilihan, hasil;
+
+    tampilMenu();
+
+    printf("Masukkan angka pertama: ");
+    scanf("%d", &x);
+    printf("Masukkan angka kedua: ");
+    scanf("%d", &y);
+
+    printf("\nPilih operasi (1: Tambah, 2: Kurang): ");
+    scanf("%d", &pilihan);
+
+    if (pilihan == 1)
+        hasil = tambah(x, y);
+    else if (pilihan == 2)
+        hasil = kurang(x, y);
+    else {
+        printf("Pilihan tidak valid!\n");
+        return 0;
+    }
+
+    cetakHasil(hasil);
+
+    return 0;
+}
+
+// Fungsi untuk menampilkan menu
+void tampilMenu() {
+    printf("=== PROGRAM LATIHAN FUNCTION ===\n");
+    printf("Operasi: Penjumlahan & Pengurangan\n\n");
+}
+
+// Fungsi untuk menjumlahkan dua angka
+int tambah(int a, int b) {
+    return a + b;
+}
+
+// Fungsi untuk mengurangkan dua angka
+int kurang(int a, int b) {
+    return a - b;
+}
+
+// Fungsi untuk mencetak hasil
+void cetakHasil(int hasil) {
+    printf("\nHasil operasi adalah: %d\n", hasil);
+}

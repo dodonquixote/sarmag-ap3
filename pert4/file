@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char nama[30];
+    int umur;
+
+    // === Input data dari user ===
+    printf("Masukkan nama: ");
+    scanf("%s", nama);
+    printf("Masukkan umur: ");
+    scanf("%d", &umur);
+
+    // === Simpan data ke file ===
+    fp = fopen("data.txt", "w"); // buka file untuk ditulis (overwrite)
+    if (fp == NULL) {
+        printf("Gagal membuka file untuk menulis!\n");
+        return 1;
+    }
+
+    fprintf(fp, "%s %d\n", nama, umur); // tulis data ke file
+    fclose(fp); // tutup file
+
+    printf("\nData berhasil disimpan ke file!\n");
+
+    // === Baca kembali isi file ===
+    fp = fopen("data.txt", "r"); // buka file untuk dibaca
+    if (fp == NULL) {
+        printf("Gagal membuka file untuk membaca!\n");
+        return 1;
+    }
+
+    printf("\nIsi file data.txt:\n");
+    while (fscanf(fp, "%s %d", nama, &umur) != EOF) {
+        printf("Nama: %s, Umur: %d\n", nama, umur);
+    }
+
+    fclose(fp); // tutup file
+    return 0;
+}
